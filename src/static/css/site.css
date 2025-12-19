@@ -1,0 +1,338 @@
+/* =====================================================
+   1. Variáveis de cor (baseadas no logo)
+   ===================================================== */
+:root {
+    --cor-principal: #003d5b;   /* Azul escuro do peixe e texto */
+    --cor-secundaria: #0077b6;  /* Azul claro das ondas */
+    --cor-acento: #f9a825;      /* Laranja/Amarelo da chama */
+    --cor-fundo: #fdfaf6;       /* Cor de fundo creme/branco sujo */
+    --cor-texto: #333333;
+    --cor-branco: #ffffff;
+}
+
+/* =====================================================
+   2. Reset e estilos globais
+   ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* =====================================================
+   3. Navegação (menu superior)
+   ===================================================== */
+nav {
+    background-color: var(--cor-principal);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-wrap: wrap; /* Permite quebra de linha em ecrãs pequenos */
+}
+
+nav a {
+    color: var(--cor-branco);
+    margin: 5px 15px; /* Margem ajustada para mobile */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-acento);
+}
+
+/* =====================================================
+   4. Estrutura principal (main/sections)
+   ===================================================== */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    max-width: 1100px;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Fundo branco alternado entre secções */
+section:nth-child(even) {
+    background-color: var(--cor-branco);
+}
+
+/* =====================================================
+   5. Títulos e parágrafos
+   ===================================================== */
+h1, h2, h3 {
+    font-weight: 800;
+    color: var(--cor-principal);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+}
+
+p {
+    margin-bottom: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================================================
+   6. Secção de Início (Hero)
+   ===================================================== */
+#inicio {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem; /* Padding ajustado */
+}
+
+#logo {
+    max-width: 250px; /* Logo ligeiramente mais pequeno */
+    margin-bottom: 2rem;
+}
+
+#inicio h1 {
+    font-size: 2.5rem; /* Tamanho ajustado */
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+}
+
+/* =====================================================
+   7. Secção "Quem Somos"
+   ===================================================== */
+#simbolo-lista {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#simbolo-lista li {
+    background: var(--cor-branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--cor-secundaria);
+    transition: transform 0.3s ease;
+}
+
+#simbolo-lista li:hover {
+    transform: translateY(-5px);
+}
+
+#simbolo-lista strong {
+    color: var(--cor-principal);
+    font-size: 1.2rem;
+}
+
+/* =====================================================
+   8. Cards reutilizáveis (Catequese, Contato, etc.)
+   ===================================================== */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+/* =====================================================
+   9. Secção Eventos + Mural (layout 2 colunas)
+   ===================================================== */
+/* Container de layout da secção de eventos */
+.eventos-layout {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+}
+
+/* Coluna principal para conteúdo de eventos */
+.eventos-conteudo {
+    flex: 2;
+    text-align: left;
+}
+
+/* Sidebar do mural de recados */
+.mural {
+    flex: 1;
+    text-align: left;
+    background: var(--cor-branco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-height: 600px;      /* limite vertical em desktop */
+    overflow-y: auto;       /* scroll se houver muitos recados */
+}
+
+.mural h3 {
+    margin-bottom: 1rem;
+}
+
+/* Cada recado dentro do mural */
+.recado + .recado {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.recado h4 {
+    font-size: 1.05rem;
+    color: var(--cor-principal);
+    margin-bottom: 0.25rem;
+}
+
+.recado-meta {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.recado-body p {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+/* Listas geradas pelo Markdown dos recados */
+.recado-body ul {
+    margin: 0.5rem 0 0.5rem 1.2rem;  /* indentação e espaçamento */
+    padding-left: 1rem;
+}
+
+.recado-body li {
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+/* Cartões de eventos na coluna esquerda */
+.evento-card + .evento-card {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(0,0,0,0.15);
+}
+
+.evento-card h4 {
+    font-size: 1.1rem;
+    color: var(--cor-principal);
+    margin-bottom: 0.25rem;
+}
+
+.evento-meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.evento-body p {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+
+/* =====================================================
+   10. Footer
+   ===================================================== */
+footer {
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* =====================================================
+   11. Media queries (responsivo / mobile)
+   ===================================================== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #inicio h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 3rem 1rem; /* Menos espaçamento lateral */
+    }
+
+    .card-container {
+        flex-direction: column; /* Cards em coluna */
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .card {
+        width: 90%;            /* Ocupa 90% da largura disponível */
+        max-width: 350px;
+    }
+
+    /* Eventos + mural empilhados em mobile */
+    .eventos-layout {
+        flex-direction: column;
+    }
+
+    .mural {
+        max-height: none;      /* Remove limite de altura em ecrãs pequenos */
+    }
+
+}
