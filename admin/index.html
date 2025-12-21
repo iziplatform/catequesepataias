@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Catequese</title>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+    backend:
+        name: git-gateway
+        branch: main # ou master
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+    - name: "eventos"
+      label: "Eventos"
+      folder: "src/eventos"
+      create: true
+      slug: "{{ano}}-{{mes}}-{{dia}}-{{slug}}"
+      fields:
+        - {label: "Título", name: "titulo", widget: "string", required: true}
+        - {label: "Data", name: "data", widget: "datetime", required: true}
+        - {label: "Local", name: "local", widget: "string"}
+        - {label: "Descrição", name: "descricao", widget: "markdown"}
+        - {label: "Imagem", name: "imagem", widget: "image"}
+        - {label: "Catequista", name: "catequista", widget: "string"}
+
+    - name: "recados"
+      label: "Recados"
+      folder: "src/recados"
+      create: true
+      slug: "{{data}}-{{slug}}"
+      fields:
+        - {label: "Título", name: "titulo", widget: "string", required: true}
+        - {label: "Data", name: "data", widget: "datetime", required: true}
+        - {label: "Conteúdo", name: "conteudo", widget: "markdown", required: true}
+    - name: "calendarios"
+      label: "Calendários"
+      folder: "src/calendarios"
+      create: true
+      slug: "{{ano}}"
+      fields:
+        - {label: "Ano", name: "ano", widget: "number", required: true}
+        - {label: "Título", name: "titulo", widget: "string"}
+        - {label: "Eventos", name: "eventos", widget: "list", fields:
+            - {label: "Data", name: "data", widget: "datetime"}
+            - {label: "Evento", name: "evento", widget: "string"}
+            - {label: "Cor", name: "cor", widget: "string", default: "#0077b6"}
+          }
+</body>
+</html>
