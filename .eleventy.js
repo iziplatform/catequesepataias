@@ -7,6 +7,9 @@ module.exports = function(eleventyConfig) {
     // Copia a pasta "src/static" diretamente para "_site/static"
     // sem processamento pelo Eleventy (útil para imagens, CSS, JS, fontes, etc.).
     eleventyConfig.addPassthroughCopy("src/static");
+    // Copia a pasta "admin" diretamente para "_site/admin"
+    // sem processamento pelo Eleventy (útil para o CMS Netlify).
+    eleventyConfig.addPassthroughCopy("admin");
 
     // Cria uma coleção chamada "recados".
     // Esta coleção lê todos os ficheiros Markdown em "src/recados/*.md"
@@ -56,6 +59,7 @@ module.exports = function(eleventyConfig) {
         .getFilteredByGlob("src/inscricoes/*.md")
         .sort((a, b) => a.data.ano_catequese - b.data.ano_catequese); // ordem crescente por ano de catequese
     });
+
 
     // Define os diretórios base que o Eleventy deve usar.
     // input: onde está o código-fonte do site.
