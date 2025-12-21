@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: iziplatform/catequesepataias
+  branch: main        # ou o branch que vais usar em produção
+  auth_type: implicit
+  app_id: Ov23liAvj80myGI50wmc
 
 media_folder: "src/assets/images"
 public_folder: "/assets/images"
