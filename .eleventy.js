@@ -47,6 +47,16 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+    //Cria uma coleção chamada "inscricoes"
+    // Esta coleção lê todos os ficheiros Markdown em "src/inscricoes/*.md"
+    // e ordena por data (mais recentes primeiro).
+    eleventyConfig.addCollection("inscricoes", function(collectionApi) {
+        return collectionApi
+        // Seleciona os ficheiros de inscrições pelo padrão de caminho.
+        .getFilteredByGlob("src/inscricoes/*.md")
+        .sort((a, b) => a.data.ano_catequese - b.data.ano_catequese); // ordem crescente por ano de catequese
+    });
+
     // Define os diretórios base que o Eleventy deve usar.
     // input: onde está o código-fonte do site.
     // output: para onde o Eleventy gera o site estático final.

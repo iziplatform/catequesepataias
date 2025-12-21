@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrições - Centro de Catequese de Pataias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/site.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/#quem-somos">Quem Somos</a>
+        <a href="/#catequese">Catequese</a>
+        <a href="/#eventos">Eventos</a>
+        <a href="/calendario/">Calendário</a>
+        <a href="/#contato">Contato</a>
+    </nav>
+
+    <main>
+        <section id="inscricoes">
+            <h2>Inscrições</h2>
+            <p>Veja as informações de livros, seguros e documentos necessários para cada ano de catequese.</p>
+
+            <div class="inscricoes-nota">
+                <p>
+                    Os catecismos e percursos utilizados seguem as orientações da
+                    <strong>Diocese de Leiria-Fátima</strong> para a catequese com crianças e adolescentes, conforme indicado
+                    em <a href="https://www.leiria-fatima.pt/catequese-com-as-criancas-2025-2026-apresentacao/" target="_blank" rel="noopener">
+                    Catequese com os adolescentes 2025 – 2026</a>.
+                </p>
+            </div>
+            
+            <div class="card-container">
+                {% for insc in collections.inscricoes %}
+                    <article class="card">
+                        <h3>{{ insc.data.title }}</h3>
+                        <div class="evento-body">
+                            {{ insc.templateContent }}
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Centro de Catequese de Pataias. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
