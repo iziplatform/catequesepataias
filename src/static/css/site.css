@@ -417,4 +417,51 @@ footer {
         max-height: none;      /* Remove limite de altura em ecrãs pequenos */
     }
 
+/* ====================================================
+   12. Inscrições (página específica)
+   ===================================================== */
+    .inscricoes-nota {
+        max-width: 900px;
+        margin: 1.5rem auto 2rem auto;
+        background: rgba(0, 119, 182, 0.06); /* azul bem suave */
+        border-left: 4px solid var(--cor-secundaria);
+        padding: 1rem 1.25rem;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .inscricoes-nota a {
+        color: var(--cor-secundaria);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .inscricoes-nota a:hover {
+        text-decoration: underline;
+    }
+
+    #inscricoes .card {
+        background: #f4f9fc; /* azul muito claro */
+        text-align: left;    /* já resolve a centralização aqui */
+    }
+    #inscricoes .card h3 {
+        text-align: center;
+    }
+
+    #inscricoes .card .evento-body {
+        text-align: left;
+    }
+
+    #inscricoes .card ul {
+        margin-left: 1.1rem;
+        padding-left: 0.2rem;
+    }
+
+    #inscricoes .card li {
+        margin-bottom: 0.35rem;
+}
+
+
 }
