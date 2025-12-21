@@ -1,0 +1,40 @@
+---
+title: "Calendário 2025/2026"
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário 2025/2026 - Centro de Catequese de Pataias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/#quem-somos">Quem Somos</a>
+        <a href="/#catequese">Catequese</a>
+        <a href="/#eventos">Eventos</a>
+        <a href="/calendario/">Calendário</a>
+        <a href="/#contato">Contato</a>
+    </nav>
+
+    <main>
+        <section id="calendario">
+            <h2>Calendário 2025/2026</h2>
+            <p>Consulte todas as datas de catequese, celebrações e momentos especiais ao longo do ano pastoral.</p>
+
+            {% assign atual = collections.calendarios | first %}
+            {{ atual.templateContent }}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Centro de Catequese de Pataias. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
