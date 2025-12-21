@@ -34,6 +34,19 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+    //Cria uma coleção chamada "calendario"
+    // Esta coleção lê todos os ficheiros Markdown em "src/calendario/*.md"
+    // e ordena por data (mais recentes primeiro).
+    eleventyConfig.addCollection("calendarios", function(collectionApi) {
+        return collectionApi
+        // Seleciona os ficheiros de calendário pelo padrão de caminho.
+        .getFilteredByGlob("src/calendarios/*.md")
+        // Ordena pela propriedade "date" do Eleventy (derivada do front matter).
+        .sort(function(a, b) {
+          return b.date - a.date; // b primeiro → ordem decrescente (mais recente em cima)
+        });
+    });
+
     // Define os diretórios base que o Eleventy deve usar.
     // input: onde está o código-fonte do site.
     // output: para onde o Eleventy gera o site estático final.
