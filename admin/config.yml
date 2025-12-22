@@ -1,3 +1,5 @@
+site_url: https://victorious-sky-0ef941503-7.westeurope.3.azurestaticapps.net
+
 backend:
   name: github
   repo: iziplatform/catequesepataias
