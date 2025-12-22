@@ -1,0 +1,50 @@
+site_url: "https://victorious-sky-0ef941503-7.westeurope.3.azurestaticapps.net"
+backend:
+  name: github
+  repo: iziplatform/catequesepataias
+  branch: add-cms-headless        # ou o branch que vais usar em produção
+  auth_type: implicit
+  client_id: Ov23liAvj80myGI50wmc
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "eventos"
+    label: "Eventos"
+    folder: "src/eventos"
+    create: true
+    slug: "{{data | date('YYYY-MM-DD')}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "titulo", widget: "string", required: true }
+      - { label: "Data", name: "data", widget: "datetime", required: true }
+      - { label: "Local", name: "local", widget: "string" }
+      - { label: "Descrição", name: "descricao", widget: "markdown" }
+      - { label: "Imagem", name: "imagem", widget: "image" }
+      - { label: "Catequista", name: "catequista", widget: "string" }
+
+  - name: "recados"
+    label: "Recados"
+    folder: "src/recados"
+    create: true
+    slug: "{{data}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "titulo", widget: "string", required: true }
+      - { label: "Data", name: "data", widget: "datetime", required: true }
+      - { label: "Conteúdo", name: "conteudo", widget: "markdown", required: true }
+
+  - name: "calendarios"
+    label: "Calendários"
+    folder: "src/calendarios"
+    create: true
+    slug: "{{ano}}"
+    fields:
+      - { label: "Ano", name: "ano", widget: "number", required: true }
+      - { label: "Título", name: "titulo", widget: "string" }
+      - label: "Eventos"
+        name: "eventos"
+        widget: "list"
+        fields:
+          - { label: "Data", name: "data", widget: "datetime" }
+          - { label: "Evento", name: "evento", widget: "string" }
+          - { label: "Cor", name: "cor", widget: "string", default: "#0077b6" }
