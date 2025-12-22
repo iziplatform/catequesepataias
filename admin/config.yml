@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: iziplatform/catequesepataias
-  branch: main        # ou o branch que vais usar em produção
+  branch: add-cms-headless        # ou o branch que vais usar em produção
   auth_type: implicit
   app_id: Ov23liAvj80myGI50wmc
 
