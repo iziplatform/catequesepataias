@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMS Catequese</title>
     
-    <!-- 🔑 ESSENCIAL para Azure Static Web Apps -->
+    <!-- 🔑 Essencial para Azure Static Web Apps -->
     <base href="/admin/">
     
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
+    <script>
+        window.CMS_MANUAL_INIT = true;
+        window.addEventListener('DOMContentLoaded', function () {
+            window.initCMS({
+                config: '/admin/config.yml'
+            });
+        });
+    </script>
 </body>
 </html>
