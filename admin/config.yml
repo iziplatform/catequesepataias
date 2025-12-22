@@ -1,11 +1,10 @@
 site_url: https://victorious-sky-0ef941503-7.westeurope.3.azurestaticapps.net
-
 backend:
   name: github
   repo: iziplatform/catequesepataias
   branch: add-cms-headless        # ou o branch que vais usar em produção
   auth_type: implicit
-  app_id: Ov23liAvj80myGI50wmc
+  client_id: Ov23liAvj80myGI50wmc
 
 media_folder: "src/assets/images"
 public_folder: "/assets/images"
