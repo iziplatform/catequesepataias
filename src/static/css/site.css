@@ -416,20 +416,37 @@ footer {
     .mural {
         max-height: none;      /* Remove limite de altura em ecrãs pequenos */
     }
+}
 
 /* ====================================================
    12. Inscrições (página específica)
    ===================================================== */
     .inscricoes-nota {
         max-width: 900px;
-        margin: 1.5rem auto 2rem auto;
+        margin: 2.0rem auto 2.5rem auto;
         background: rgba(0, 119, 182, 0.06); /* azul bem suave */
         border-left: 4px solid var(--cor-secundaria);
-        padding: 1rem 1.25rem;
+        padding: 1.5rem 1.75rem;
         border-radius: 10px;
-        font-size: 0.95rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
         text-align: left;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    }
+
+    .inscricoes-nota::before {
+        content: "ℹ️ Informação importante";
+        display: block;
+        font-weight: 800;
+        color: var(--cor-principal);
+        margin-bottom: 0.75rem;
+    }
+
+    .inscricoes-nota p {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0rem;
     }
 
     .inscricoes-nota a {
@@ -462,6 +479,3 @@ footer {
     #inscricoes .card li {
         margin-bottom: 0.35rem;
     }
-
-
-}
