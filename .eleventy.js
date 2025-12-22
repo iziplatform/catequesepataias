@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     // Copia a pasta "admin" diretamente para "_site/admin"
     // sem processamento pelo Eleventy (útil para o CMS Netlify).
     eleventyConfig.addPassthroughCopy("admin");
+    eleventyConfig.addPassthroughCopy("src/assets");
 
     // Cria uma coleção chamada "recados".
     // Esta coleção lê todos os ficheiros Markdown em "src/recados/*.md"
