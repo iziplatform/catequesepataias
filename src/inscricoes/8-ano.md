@@ -3,8 +3,8 @@ title: "8.º ano"
 ano_catequese: 8
 ---
 
-**Catecismo:** “AM4 – Viver em Cristo” – 7 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “AM4 – Viver em Cristo” – 7 €\
+**Contributo paroquial:** 5 €\
 **Total por jovem:** 12 €
 
 **Notas:**

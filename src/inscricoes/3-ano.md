@@ -3,8 +3,8 @@ title: "3.º ano"
 ano_catequese: 3
 ---
 
-**Catecismo:** “Queremos seguir Jesus” – 7 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “Queremos seguir Jesus” – 7 €\
+**Contributo paroquial:** 5 €\
 **Total por criança:** 12 €
 
 **Notas:**

@@ -3,8 +3,8 @@ title: "1.º ano"
 ano_catequese: 1
 ---
 
-**Catecismo:** “Crescer na Fé 1” – 6 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “Crescer na Fé 1” – 6 €\
+**Contributo paroquial:** 5 €\
 **Total por criança:** 11 €
 
 - **Documentos necessários:**

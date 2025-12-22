@@ -3,8 +3,8 @@ title: "2.º ano"
 ano_catequese: 2
 ---
 
-**Catecismo:** “Ensina-nos a Rezar” – 6 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “Ensina-nos a Rezar” – 6 €\
+**Contributo paroquial:** 5 €\
 **Total por criança:** 11 €
 
 **Documentos necessários:**

@@ -3,8 +3,8 @@ title: "9.º ano"
 ano_catequese: 9
 ---
 
-**Catecismo:** “DM1 – Raízes” – 7 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “DM1 – Raízes” – 7 €\
+**Contributo paroquial:** 5 €\
 **Total por jovem:** 12 €
 
 **Notas:**

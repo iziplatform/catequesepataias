@@ -3,8 +3,8 @@ title: "10.º ano"
 ano_catequese: 10
 ---
 
-**Catecismo:** “DM2 – Sonhos” – 7 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “DM2 – Sonhos” – 7 €\
+**Contributo paroquial:** 5 €\
 **Total por jovem:** 12 €
 
 **Notas:**

@@ -3,8 +3,8 @@ title: "5.º ano"
 ano_catequese: 5
 ---
 
-**Catecismo:** “AM1 – Viver a Palavra” – 8 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “AM1 – Viver a Palavra” – 8 €\
+**Contributo paroquial:** 5 €\
 **Total por criança:** 13 €
 
 **Notas:**
