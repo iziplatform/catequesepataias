@@ -3,8 +3,8 @@ title: "7.º ano"
 ano_catequese: 7
 ---
 
-**Catecismo:** “AM3 – Viver os Sacramentos” – 7 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “AM3 – Viver os Sacramentos” – 7 €\
+**Contributo paroquial:** 5 €\
 **Total por jovem:** 12 €
 
 **Notas:**

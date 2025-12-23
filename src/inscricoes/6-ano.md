@@ -3,8 +3,8 @@ title: "6.º ano"
 ano_catequese: 6
 ---
 
-**Catecismo:** “Creio em Jesus Cristo” – 7 €
-**Contributo paroquial:** 5 €
+**Catecismo:** “Creio em Jesus Cristo” – 7 €\
+**Contributo paroquial:** 5 €\
 **Total por criança:** 12 €
 
 **Notas:**
